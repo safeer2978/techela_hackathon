@@ -26,6 +26,17 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.18</version>
 		</dependency>
+		  <dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>itextpdf</artifactId>
+    <version>5.5.13</version>
+  </dependency>
+
+<dependency>
+    <groupId>commons-i18n</groupId>
+    <artifactId>commons-i18n</artifactId>
+    <version>0.5</version>
+</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
