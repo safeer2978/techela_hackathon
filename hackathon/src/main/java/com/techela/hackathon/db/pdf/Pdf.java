@@ -18,6 +18,7 @@ import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
+import com.techela.hackathon.db.model.Student;
 
 public class Pdf {
 	
@@ -29,17 +30,15 @@ public class Pdf {
         cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
         tbl.addCell(cell1);
 	}
-	public static void main(String[] args) {
+	public void mainPdf(ArrayList<Student> arl) {
 
-		ArrayList<Colm> arl=new ArrayList<Colm>();
+
 		Locale l=new Locale("en","US");
 		
 		ResourceBundle r= ResourceBundle.getBundle("Bundle", l);
 		String str=r.getString("text");
 		System.out.println(str);
 		//SAMPLE COLM
-		Colm col=new Colm("ABC","123","CSE","2018-22");
-		arl.add(col);		
 		//HEADING KA PART
 		ArrayList<String> heads=new ArrayList<String>();
 		heads.add("PRN");
@@ -74,17 +73,17 @@ public class Pdf {
 		}
         
         for(int i=0;i<arl.size();i++) {
-        	Colm cols=arl.get(i);        	        	
+        	Student cols=arl.get(i);
         	PdfPCell cell1=new PdfPCell(new Paragraph(cols.getPrn()));
         	addCell(cell1,tbl);    		            
         		            
-	        PdfPCell cell2=new PdfPCell(new Paragraph(cols.getName()));
+	        PdfPCell cell2=new PdfPCell(new Paragraph(cols.getFirst_name()));
             addCell(cell2,tbl);
             
-            PdfPCell cell3=new PdfPCell(new Paragraph(cols.getBranch()));
+            PdfPCell cell3=new PdfPCell(new Paragraph(cols.getYear()));
             addCell(cell3,tbl);
                     
-            PdfPCell cell4=new PdfPCell(new Paragraph(cols.getBatch()));
+            PdfPCell cell4=new PdfPCell(new Paragraph(cols.getId()));
             addCell(cell4,tbl);            
     		}
 		
