@@ -1,4 +1,4 @@
-package com.techela.hackathon;
+package com.techela.hackathon.db.model;
 
 public class ExamData{
     String id;
