@@ -17,7 +17,7 @@ import com.techela.hackathon.db.model.Teacher;
 public class Pdf {
 
 	//TODO: Change DIR as per system..
-	final String PDF_OUTPUT_CHROME="C:\\Users\\safee\\Desktop\\techela\\techela_hackathon\\hackathon\\output12345.pdf";
+	final String PDF_OUTPUT_CHROME="C:\\Users\\safee\\Desktop\\techela\\techela_hackathon\\hackathon\\chrome_output.pdf";
 
 	/**	Generates PDF using Chrome Headless.
 	 *  Requires Chome 58+ installed on system. On windows, chrome needs to be added as a PATH variable
